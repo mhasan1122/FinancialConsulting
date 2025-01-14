@@ -37,24 +37,24 @@ function App() {
     <div className="bg-[#217A7E] text-white min-h-screen">
       <ToastContainer position="top-right" autoClose={5000} />
       {/* Header */}
-      <header className="p-6 flex justify-between items-center shadow-md">
+      <header className="p-4 sm:p-6 flex justify-between items-center shadow-md">
         <img
           src={logo}
           alt="ZeroAPR Logo"
-          className="h-12 w-auto logo-animation"
-          style={{ height: '64px', width: '250px' }}
+          className="h-10 sm:h-12 w-auto logo-animation"
+          style={{ maxWidth: '250px' }}
         />
       </header>
 
       {/* About Section */}
-      <section className="px-8 py-16 text-center bg-[#1b6468] rounded-b-2xl shadow-lg relative h-[460px]">
+      <section className="px-4 sm:px-8 py-12 sm:py-16 text-center bg-[#1b6468] rounded-b-2xl shadow-lg relative h-auto">
         <div className="absolute inset-0 opacity-30">
           <img src={bannerlogo} alt="Banner Logo" className="w-full h-full object-cover" />
         </div>
-        <h2 className="text-4xl font-bold mb-6 relative z-10">
+        <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 relative z-10">
           <Typewriter words={['About ZeroAPR']} loop={1} typeSpeed={70} deleteSpeed={50} />
         </h2>
-        <p className="text-lg leading-relaxed max-w-3xl mx-auto relative z-10">
+        <p className="text-sm sm:text-lg leading-relaxed max-w-2xl sm:max-w-3xl mx-auto relative z-10">
           <Typewriter
             words={[
               'At ZeroAPR, we help small business owners secure 0% APR financing from major banks. Stop paying high interest and keep more money in your pocket. Our experienced team is here to guide you every step of the way toward financial freedom.',
@@ -66,10 +66,12 @@ function App() {
       </section>
 
       {/* Client Form Section */}
-      <section className="px-8 py-16 bg-white text-[#217A7E] rounded-t-3xl shadow-inner">
-        <h2 className="text-4xl font-bold text-center mb-8">Stop Paying High Interest</h2>
+      <section className="px-4 sm:px-8 py-12 sm:py-16 bg-white text-[#217A7E] rounded-t-3xl shadow-inner">
+        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">
+          Stop Paying High Interest
+        </h2>
         <form
-          className="max-w-lg mx-auto space-y-6 bg-gray-50 p-8 rounded-lg shadow"
+          className="max-w-full sm:max-w-lg mx-auto space-y-6 bg-gray-50 p-4 sm:p-8 rounded-lg shadow"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col items-start">
